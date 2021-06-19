@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: dockerfile-flask
+    container_name: ESUN_API
+    restart: unless-stopped
+    ports:
+      - "8080:5000"
+    volumes:
+      - ./app:/app
